@@ -21,11 +21,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.excelsiooor.demo",
+      "sdkVersion": "48.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "main": "./index.ts"
+    "main": "./index.ts",
+    "extra": {
+      "eas": {
+        "projectId": "355ba55e-804d-4ddc-ac74-8efb88edccd3"
+      }
+    }
   }
 }
