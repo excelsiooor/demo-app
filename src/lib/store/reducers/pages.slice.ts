@@ -1,23 +1,15 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  firstScreen: 1,
-  secondScreen: 1,
+  isMainDirection: true
 }
 
 export const setupPagesSlice = createSlice({
   name: 'setupPagesSlice',
   initialState,
   reducers: {
-    setFirstScreenPage: (state, action: PayloadAction<number>) => {
-      state.firstScreen = action.payload;
-    },
-    setSecondScreenPage: (state, action: PayloadAction<number>) => {
-      state.secondScreen = action.payload;
-    },
     switchContent: (state) => {
-      state.firstScreen = state.firstScreen === 1 ? 2 : 1;
-      state.secondScreen = state.firstScreen === 1 ? 2 : 1;
+      state.isMainDirection = (!state.isMainDirection);
       return state;
     },
   }

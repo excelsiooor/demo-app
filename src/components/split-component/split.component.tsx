@@ -85,12 +85,12 @@ const RightPart = () => (
 );
 
 export const SplitComponent: React.FC = () => {
-  const { secondScreen } = useAppSelector(
+  const { isMainDirection } = useAppSelector(
     (state) => state.pagesReducer
   );
 
   const screens =
-    secondScreen === 1
+    isMainDirection
       ? [
         {key: 1, component: (k: number) => <LeftPart key={k} />},
         {key: 2, component: (k: number) => <RightPart key={k} />}
